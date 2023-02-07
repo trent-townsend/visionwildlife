@@ -1,16 +1,20 @@
 import React from "react";
 import "../components/navbar.css";
 import Hamburger from "../assets/menu-hamburger.png";
+import Cross from "../assets/cross.svg";
 
 export default function NavBar() {
 
   const [showNavbar, setShowNavbar] = React.useState(false);
+
+  const icon = showNavbar ? Cross : Hamburger
 
   function toggleMenu() {
     setShowNavbar((prevState) => !prevState);
   }
 
   return (
+    <div className="parent">
     <nav className="top-navbar">
       <div className="header-logo-container">
         <a href="./">
@@ -21,7 +25,7 @@ export default function NavBar() {
         </a>
       </div>
       <div className="hamburger-container">
-        <img className="hamburger" src={Hamburger} onClick={toggleMenu} />
+        <img className="hamburger" src={icon} onClick={toggleMenu} />
       </div>
 
       {showNavbar && (
@@ -43,5 +47,6 @@ export default function NavBar() {
         </div>
       )}
     </nav>
+    </div>
   );
 }

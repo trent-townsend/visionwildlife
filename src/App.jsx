@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div>
-    <NavBar />
-    <Header />
+    <NavBar style={{zIndex:1}}/>
+    <Header style={{zIndex:0}}/>
     </div>
   )
 }

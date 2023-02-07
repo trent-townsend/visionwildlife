@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
   
+.parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
+
   .top-navbar {
     background-color: transparent;
     height: 8rem;
@@ -27,19 +35,19 @@
   
   .top-navlinks-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-top: 20rem;
+    position: absolute;
+    right: 0;
+    top: 0;
     font-size: 1.7rem;
     background-color: #2b2c2f;
     width: 30vw;
+    height: 100vh;
   }
   
   .top-navlinks-container > ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 1rem;
   }
 
   .navbarlink {
@@ -60,8 +68,11 @@
   }
   
   .hamburger {
-    height: 50%;
+    position: absolute;
+    right: 2rem;
+    height: 40px;
     width: auto;
     cursor: pointer;
+    z-index: 1;
   }
   
