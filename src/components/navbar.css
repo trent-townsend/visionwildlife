@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+  
+  .top-navbar {
+    background-color: transparent;
+    height: 8rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins;
+    font-weight: 500;
+  }
+  
+  .header-logo-container {
+    height: 100%;
+    width: auto;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .header-logo {
+    height: 100%;
+    width: auto;
+    margin-left: 1rem;
+  }
+  
+  .top-navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 20rem;
+    font-size: 1.7rem;
+    background-color: #2b2c2f;
+    width: 30vw;
+  }
+  
+  .top-navlinks-container > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbarlink {
+    color: white;
+    list-style-type: none;
+  }
+
+  .navbarlink:hover {
+    color: black;
+  }
+
+  .hamburger-container {
+    height: 100%;
+    margin-right: 1rem;
+    width: auto;
+    max-width: 70%;
+    max-height: 70%;
+  }
+  
+  .hamburger {
+    height: 50%;
+    width: auto;
+    cursor: pointer;
+  }
+  

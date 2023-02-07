@@ -1,0 +1,20 @@
+.header {
+    background-image: url("white-lipped-treefrog-bg.jpg");
+    color: white;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: -1;
+    width: 100vw;
+    background-color: black;
+    background-size:contain;
+    height: 100vh;
+}
+
+.main-title {
+    position: absolute;
+    right: 25vw;
+    top: 50vh;
+    max-width: 25vw;
+}
