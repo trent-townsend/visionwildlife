@@ -21,10 +21,11 @@ export default function NavBar() {
           <img
             className="header-logo"
             src="logo-visionwildlife-frog-only.svg"
+            alt=""
           />
         </a>
       </div>
-      <div className="hamburger-container">
+      <div className="hamburger-container" alt="">
         <img className="hamburger" src={icon} onClick={toggleMenu} />
       </div>
 
