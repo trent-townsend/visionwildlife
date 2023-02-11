@@ -1,53 +1,51 @@
-import React from "react";
-import "../components/navbar.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Brand from '../assets/icons/logo-visionwildlife-frog-only.svg'
 import Hamburger from "../assets/menu-hamburger.png";
 import Cross from "../assets/cross.svg";
+import './navbar.css'
 
-export default function NavBar() {
+export default function NavBar2 () {
 
-  const [showNavbar, setShowNavbar] = React.useState(false);
+    const [showNavbar, setShowNavbar] = React.useState(false)
 
-  const icon = showNavbar ? Cross : Hamburger
+    const icon = showNavbar ? Cross : Hamburger
 
-  function toggleMenu() {
-    setShowNavbar((prevState) => !prevState);
-  }
+    function toggleNavBar() {
+        setShowNavbar((prevState) => !prevState);
+    }
 
-  return (
-    <div className="parent">
-    <nav className="top-navbar">
-      <div className="header-logo-container">
-        <a href="./">
-          <img
-            className="header-logo"
-            src="logo-visionwildlife-frog-only.svg"
-            alt=""
-          />
-        </a>
-      </div>
-      <div className="hamburger-container" alt="">
-        <img className="hamburger" src={icon} onClick={toggleMenu} />
-      </div>
-
-      {showNavbar && (
-        <div className="top-navlinks-container">
-          <ul>
-            <a href="#">
-              <li className="navbarlink">Explore</li>
-            </a>
-            <a href="#">
-              <li className="navbarlink">Learn</li>
-            </a>
-            <a href="#">
-              <li className="navbarlink">About</li>
-            </a>
-            <a href="#">
-              <li className="navbarlink">Contact</li>
-            </a>
-          </ul>
-        </div>
-      )}
-    </nav>
-    </div>
-  );
+    return (
+        <nav className='navbar'>
+            <div className="container">
+                <div className="logo">
+                    <NavLink to="/">
+                        <img src={Brand} />
+                    </NavLink>
+                </div>
+                <div className='icon-container' onClick={toggleNavBar}>
+                    <img className="menu-icon" src={icon} />
+                </div>
+                <div className={`nav-elements  ${showNavbar && 'active'}`}>
+                    <ul>
+                        <li>
+                            <NavLink to="/">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/explore">Explore</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/learn">Learn</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about">About</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact">Contact</NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    )
 }
